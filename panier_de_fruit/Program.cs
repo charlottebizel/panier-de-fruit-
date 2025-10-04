@@ -75,7 +75,7 @@ class Program
                             panier[nbFruits - 1] = null;
                             nbFruits--;
                             retire = true;
-                            Console.WriteLine($"✅ {fruitARetirer} retiré du panier !");
+                            Console.WriteLine($" {fruitARetirer} retiré du panier !");
                             break;
                         }
                     }
