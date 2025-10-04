@@ -24,7 +24,7 @@ class Program
 
             switch (choix)
             {
-                case "1": // Ajouter
+                case "1": // Ajouter un fruit dans le panier
                     if (nbFruits >= TAILLE_MAX)
                     {
                         Console.WriteLine(" Panier plein, impossible d'ajouter.");
@@ -34,7 +34,7 @@ class Program
                         Console.Write("Entrez le nom du fruit à ajouter : ");
                         string fruit = Console.ReadLine();
 
-                        // Vérification de doublon
+                        // Vérification de doublon dans le panier
                         bool existe = false;
                         for (int i = 0; i < nbFruits; i++)
                         {
@@ -58,7 +58,7 @@ class Program
                     }
                     break;
 
-                case "2": // Retirer
+                case "2": // Retirer un fruit
                     Console.Write("Entrez le fruit à retirer : ");
                     string fruitARetirer = Console.ReadLine();
                     bool retire = false;
@@ -67,7 +67,7 @@ class Program
                     {
                         if (panier[i].Equals(fruitARetirer, StringComparison.OrdinalIgnoreCase))
                         {
-                            // Décalage des éléments
+                            // Décalage des éléments quand un fruit est retiré
                             for (int j = i; j < nbFruits - 1; j++)
                             {
                                 panier[j] = panier[j + 1];
